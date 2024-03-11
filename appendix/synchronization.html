@@ -1,1134 +1,1160 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>Synchronization · GitBook</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="generator" content="GitBook 3.2.3" />
 
-<!DOCTYPE HTML>
-<html lang="" >
-    <head>
-        <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Synchronization · GitBook</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
-        
-        
-        
-    
-    <link rel="stylesheet" href="../gitbook/style.css">
+    <link rel="stylesheet" href="../gitbook/style.css" />
 
-    
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
-                
-            
-        
+    <link
+      rel="stylesheet"
+      href="../gitbook/gitbook-plugin-highlight/website.css"
+    />
 
-    
+    <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css" />
 
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
+    <link
+      rel="stylesheet"
+      href="../gitbook/gitbook-plugin-fontsettings/website.css"
+    />
 
-        
-    
-    
-    <meta name="HandheldFriendly" content="true"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
-    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+    <meta name="HandheldFriendly" content="true" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="152x152"
+      href="../gitbook/images/apple-touch-icon-precomposed-152.png"
+    />
+    <link
+      rel="shortcut icon"
+      href="../gitbook/images/favicon.ico"
+      type="image/x-icon"
+    />
 
-    
     <link rel="next" href="memory_allocation.html" />
-    
-    
+
     <link rel="prev" href="threads.html" />
-    
+  </head>
+  <body>
+    <div class="book">
+      <div class="book-summary">
+        <div id="book-search-input" role="search">
+          <input type="text" placeholder="Type to search" />
+        </div>
 
-    </head>
-    <body>
-        
-<div class="book">
-    <div class="book-summary">
-        
-            
-<div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
-</div>
+        <nav role="navigation">
+          <ul class="summary">
+            <li class="header">Introduction</li>
 
-            
-                <nav role="navigation">
-                
+            <li class="chapter" data-level="1.1" data-path="../">
+              <a href="../"> Introduction </a>
+            </li>
 
+            <li
+              class="chapter"
+              data-level="1.2"
+              data-path="../introduction/getting_started.html"
+            >
+              <a href="../introduction/getting_started.html">
+                Getting Started
+              </a>
+            </li>
 
-<ul class="summary">
-    
-    
+            <li
+              class="chapter"
+              data-level="1.3"
+              data-path="../introduction/grading.html"
+            >
+              <a href="../introduction/grading.html"> Grading </a>
+            </li>
 
-    
+            <li
+              class="chapter"
+              data-level="1.4"
+              data-path="../introduction/legal_and_ethical_issues.html"
+            >
+              <a href="../introduction/legal_and_ethical_issues.html">
+                Legal and Ethical Issues
+              </a>
+            </li>
 
-    
-        
-        <li class="header">Introduction</li>
-        
-        
-    
-        <li class="chapter " data-level="1.1" data-path="../">
-            
-                <a href="../">
-            
-                    
-                    Introduction
-            
-                </a>
-            
+            <li class="header">Project1: Threads</li>
 
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2" data-path="../introduction/getting_started.html">
-            
-                <a href="../introduction/getting_started.html">
-            
-                    
-                    Getting Started
-            
-                </a>
-            
+            <li
+              class="chapter"
+              data-level="2.1"
+              data-path="../project1/introduction.html"
+            >
+              <a href="../project1/introduction.html"> Introduction </a>
+            </li>
 
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3" data-path="../introduction/grading.html">
-            
-                <a href="../introduction/grading.html">
-            
-                    
-                    Grading
-            
-                </a>
-            
+            <li
+              class="chapter"
+              data-level="2.2"
+              data-path="../project1/alarm_clock.html"
+            >
+              <a href="../project1/alarm_clock.html"> Alarm Clock </a>
+            </li>
 
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4" data-path="../introduction/legal_and_ethical_issues.html">
-            
-                <a href="../introduction/legal_and_ethical_issues.html">
-            
-                    
-                    Legal and Ethical Issues
-            
-                </a>
-            
+            <li
+              class="chapter"
+              data-level="2.3"
+              data-path="../project1/priority_scheduling.html"
+            >
+              <a href="../project1/priority_scheduling.html">
+                Priority Scheduling
+              </a>
+            </li>
 
-            
-        </li>
-    
+            <li
+              class="chapter"
+              data-level="2.4"
+              data-path="../project1/advanced_scheduler.html"
+            >
+              <a href="../project1/advanced_scheduler.html">
+                Advanced Scheduler
+              </a>
+            </li>
 
-    
-        
-        <li class="header">Project1: Threads</li>
-        
-        
-    
-        <li class="chapter " data-level="2.1" data-path="../project1/introduction.html">
-            
-                <a href="../project1/introduction.html">
-            
-                    
-                    Introduction
-            
-                </a>
-            
+            <li
+              class="chapter"
+              data-level="2.5"
+              data-path="../project1/FAQ.html"
+            >
+              <a href="../project1/FAQ.html"> FAQ </a>
+            </li>
 
-            
-        </li>
-    
-        <li class="chapter " data-level="2.2" data-path="../project1/alarm_clock.html">
-            
-                <a href="../project1/alarm_clock.html">
-            
-                    
-                    Alarm Clock
-            
-                </a>
-            
+            <li class="header">Project2: User Programs</li>
 
-            
-        </li>
-    
-        <li class="chapter " data-level="2.3" data-path="../project1/priority_scheduling.html">
-            
-                <a href="../project1/priority_scheduling.html">
-            
-                    
-                    Priority Scheduling
-            
-                </a>
-            
+            <li
+              class="chapter"
+              data-level="3.1"
+              data-path="../project2/introduction.html"
+            >
+              <a href="../project2/introduction.html"> Introduction </a>
+            </li>
 
-            
-        </li>
-    
-        <li class="chapter " data-level="2.4" data-path="../project1/advanced_scheduler.html">
-            
-                <a href="../project1/advanced_scheduler.html">
-            
-                    
-                    Advanced Scheduler
-            
-                </a>
-            
+            <li
+              class="chapter"
+              data-level="3.2"
+              data-path="../project2/argument_passing.html"
+            >
+              <a href="../project2/argument_passing.html"> Argument Passing </a>
+            </li>
 
-            
-        </li>
-    
-        <li class="chapter " data-level="2.5" data-path="../project1/FAQ.html">
-            
-                <a href="../project1/FAQ.html">
-            
-                    
-                    FAQ
-            
-                </a>
-            
+            <li
+              class="chapter"
+              data-level="3.3"
+              data-path="../project2/user_memory.html"
+            >
+              <a href="../project2/user_memory.html"> User Memory </a>
+            </li>
 
-            
-        </li>
-    
+            <li
+              class="chapter"
+              data-level="3.4"
+              data-path="../project2/system_call.html"
+            >
+              <a href="../project2/system_call.html"> System Calls </a>
+            </li>
 
-    
-        
-        <li class="header">Project2: User Programs</li>
-        
-        
-    
-        <li class="chapter " data-level="3.1" data-path="../project2/introduction.html">
-            
-                <a href="../project2/introduction.html">
-            
-                    
-                    Introduction
-            
-                </a>
-            
+            <li
+              class="chapter"
+              data-level="3.5"
+              data-path="../project2/process_termination.html"
+            >
+              <a href="../project2/process_termination.html">
+                Process Termination Messages
+              </a>
+            </li>
 
-            
-        </li>
-    
-        <li class="chapter " data-level="3.2" data-path="../project2/argument_passing.html">
-            
-                <a href="../project2/argument_passing.html">
-            
-                    
-                    Argument Passing
-            
-                </a>
-            
+            <li
+              class="chapter"
+              data-level="3.6"
+              data-path="../project2/deny_write.html"
+            >
+              <a href="../project2/deny_write.html">
+                Denying Writes to Executables
+              </a>
+            </li>
 
-            
-        </li>
-    
-        <li class="chapter " data-level="3.3" data-path="../project2/user_memory.html">
-            
-                <a href="../project2/user_memory.html">
-            
-                    
-                    User Memory
-            
-                </a>
-            
+            <li
+              class="chapter"
+              data-level="3.7"
+              data-path="../project2/dup.html"
+            >
+              <a href="../project2/dup.html">
+                Extend File Descriptor (Extra)
+              </a>
+            </li>
 
-            
-        </li>
-    
-        <li class="chapter " data-level="3.4" data-path="../project2/system_call.html">
-            
-                <a href="../project2/system_call.html">
-            
-                    
-                    System Calls
-            
-                </a>
-            
+            <li
+              class="chapter"
+              data-level="3.8"
+              data-path="../project2/FAQ.html"
+            >
+              <a href="../project2/FAQ.html"> FAQ </a>
+            </li>
 
-            
-        </li>
-    
-        <li class="chapter " data-level="3.5" data-path="../project2/process_termination.html">
-            
-                <a href="../project2/process_termination.html">
-            
-                    
-                    Process Termination Messages
-            
-                </a>
-            
+            <li class="header">Project3: Virtual Memory</li>
 
-            
-        </li>
-    
-        <li class="chapter " data-level="3.6" data-path="../project2/deny_write.html">
-            
-                <a href="../project2/deny_write.html">
-            
-                    
-                    Denying Writes to Executables
-            
-                </a>
-            
+            <li
+              class="chapter"
+              data-level="4.1"
+              data-path="../project3/introduction.html"
+            >
+              <a href="../project3/introduction.html"> Introduction </a>
+            </li>
 
-            
-        </li>
-    
-        <li class="chapter " data-level="3.7" data-path="../project2/dup.html">
-            
-                <a href="../project2/dup.html">
-            
-                    
-                    Extend File Descriptor (Extra)
-            
-                </a>
-            
+            <li
+              class="chapter"
+              data-level="4.2"
+              data-path="../project3/vm_management.html"
+            >
+              <a href="../project3/vm_management.html"> Memory Management </a>
+            </li>
 
-            
-        </li>
-    
-        <li class="chapter " data-level="3.8" data-path="../project2/FAQ.html">
-            
-                <a href="../project2/FAQ.html">
-            
-                    
-                    FAQ
-            
-                </a>
-            
+            <li
+              class="chapter"
+              data-level="4.3"
+              data-path="../project3/anon.html"
+            >
+              <a href="../project3/anon.html"> Anonymous Page </a>
+            </li>
 
-            
-        </li>
-    
+            <li
+              class="chapter"
+              data-level="4.4"
+              data-path="../project3/stack_growth.html"
+            >
+              <a href="../project3/stack_growth.html"> Stack Growth </a>
+            </li>
 
-    
-        
-        <li class="header">Project3: Virtual Memory</li>
-        
-        
-    
-        <li class="chapter " data-level="4.1" data-path="../project3/introduction.html">
-            
-                <a href="../project3/introduction.html">
-            
-                    
-                    Introduction
-            
-                </a>
-            
+            <li
+              class="chapter"
+              data-level="4.5"
+              data-path="../project3/memory_mapped_files.html"
+            >
+              <a href="../project3/memory_mapped_files.html">
+                Memory Mapped Files
+              </a>
+            </li>
 
-            
-        </li>
-    
-        <li class="chapter " data-level="4.2" data-path="../project3/vm_management.html">
-            
-                <a href="../project3/vm_management.html">
-            
-                    
-                    Memory Management
-            
-                </a>
-            
+            <li
+              class="chapter"
+              data-level="4.6"
+              data-path="../project3/swapping.html"
+            >
+              <a href="../project3/swapping.html"> Swap In/Out </a>
+            </li>
 
-            
-        </li>
-    
-        <li class="chapter " data-level="4.3" data-path="../project3/anon.html">
-            
-                <a href="../project3/anon.html">
-            
-                    
-                    Anonymous Page
-            
-                </a>
-            
+            <li
+              class="chapter"
+              data-level="4.7"
+              data-path="../project3/cow.html"
+            >
+              <a href="../project3/cow.html"> Copy-on-Write (Extra) </a>
+            </li>
 
-            
-        </li>
-    
-        <li class="chapter " data-level="4.4" data-path="../project3/stack_growth.html">
-            
-                <a href="../project3/stack_growth.html">
-            
-                    
-                    Stack Growth
-            
-                </a>
-            
+            <li
+              class="chapter"
+              data-level="4.8"
+              data-path="../project3/FAQ.html"
+            >
+              <a href="../project3/FAQ.html"> FAQ </a>
+            </li>
 
-            
-        </li>
-    
-        <li class="chapter " data-level="4.5" data-path="../project3/memory_mapped_files.html">
-            
-                <a href="../project3/memory_mapped_files.html">
-            
-                    
-                    Memory Mapped Files
-            
-                </a>
-            
+            <li class="header">Project4: File System</li>
 
-            
-        </li>
-    
-        <li class="chapter " data-level="4.6" data-path="../project3/swapping.html">
-            
-                <a href="../project3/swapping.html">
-            
-                    
-                    Swap In/Out
-            
-                </a>
-            
+            <li
+              class="chapter"
+              data-level="5.1"
+              data-path="../project4/introduction.html"
+            >
+              <a href="../project4/introduction.html"> Introduction </a>
+            </li>
 
-            
-        </li>
-    
-        <li class="chapter " data-level="4.7" data-path="../project3/cow.html">
-            
-                <a href="../project3/cow.html">
-            
-                    
-                    Copy-on-Write (Extra)
-            
-                </a>
-            
+            <li
+              class="chapter"
+              data-level="5.2"
+              data-path="../project4/indexed_and_extensible_files.html"
+            >
+              <a href="../project4/indexed_and_extensible_files.html">
+                Indexed and Extensible Files
+              </a>
+            </li>
 
-            
-        </li>
-    
-        <li class="chapter " data-level="4.8" data-path="../project3/FAQ.html">
-            
-                <a href="../project3/FAQ.html">
-            
-                    
-                    FAQ
-            
-                </a>
-            
+            <li
+              class="chapter"
+              data-level="5.3"
+              data-path="../project4/subdirectories.html"
+            >
+              <a href="../project4/subdirectories.html">
+                Subdirectories and Soft Links
+              </a>
+            </li>
 
-            
-        </li>
-    
+            <li
+              class="chapter"
+              data-level="5.4"
+              data-path="../project4/buffer_cache.html"
+            >
+              <a href="../project4/buffer_cache.html"> Buffer Cache (Extra) </a>
+            </li>
 
-    
-        
-        <li class="header">Project4: File System</li>
-        
-        
-    
-        <li class="chapter " data-level="5.1" data-path="../project4/introduction.html">
-            
-                <a href="../project4/introduction.html">
-            
-                    
-                    Introduction
-            
-                </a>
-            
+            <li
+              class="chapter"
+              data-level="5.5"
+              data-path="../project4/synchronization.html"
+            >
+              <a href="../project4/synchronization.html"> Synchronization </a>
+            </li>
 
-            
-        </li>
-    
-        <li class="chapter " data-level="5.2" data-path="../project4/indexed_and_extensible_files.html">
-            
-                <a href="../project4/indexed_and_extensible_files.html">
-            
-                    
-                    Indexed and Extensible Files
-            
-                </a>
-            
+            <li
+              class="chapter"
+              data-level="5.6"
+              data-path="../project4/FAQ.html"
+            >
+              <a href="../project4/FAQ.html"> FAQ </a>
+            </li>
 
-            
-        </li>
-    
-        <li class="chapter " data-level="5.3" data-path="../project4/subdirectories.html">
-            
-                <a href="../project4/subdirectories.html">
-            
-                    
-                    Subdirectories and Soft Links
-            
-                </a>
-            
+            <li class="header">Appendix</li>
 
-            
-        </li>
-    
-        <li class="chapter " data-level="5.4" data-path="../project4/buffer_cache.html">
-            
-                <a href="../project4/buffer_cache.html">
-            
-                    
-                    Buffer Cache (Extra)
-            
-                </a>
-            
+            <li class="chapter" data-level="6.1" data-path="threads.html">
+              <a href="threads.html"> Threads </a>
+            </li>
 
-            
-        </li>
-    
-        <li class="chapter " data-level="5.5" data-path="../project4/synchronization.html">
-            
-                <a href="../project4/synchronization.html">
-            
-                    
-                    Synchronization
-            
-                </a>
-            
+            <li
+              class="chapter active"
+              data-level="6.2"
+              data-path="synchronization.html"
+            >
+              <a href="synchronization.html"> Synchronization </a>
+            </li>
 
-            
-        </li>
-    
-        <li class="chapter " data-level="5.6" data-path="../project4/FAQ.html">
-            
-                <a href="../project4/FAQ.html">
-            
-                    
-                    FAQ
-            
-                </a>
-            
+            <li
+              class="chapter"
+              data-level="6.3"
+              data-path="memory_allocation.html"
+            >
+              <a href="memory_allocation.html"> Memory Allocation </a>
+            </li>
 
-            
-        </li>
-    
+            <li
+              class="chapter"
+              data-level="6.4"
+              data-path="virtual_address.html"
+            >
+              <a href="virtual_address.html"> Virtual Address </a>
+            </li>
 
-    
-        
-        <li class="header">Appendix</li>
-        
-        
-    
-        <li class="chapter " data-level="6.1" data-path="threads.html">
-            
-                <a href="threads.html">
-            
-                    
-                    Threads
-            
-                </a>
-            
+            <li class="chapter" data-level="6.5" data-path="page_table.html">
+              <a href="page_table.html"> Page Table </a>
+            </li>
 
-            
-        </li>
-    
-        <li class="chapter active" data-level="6.2" data-path="synchronization.html">
-            
-                <a href="synchronization.html">
-            
-                    
-                    Synchronization
-            
-                </a>
-            
+            <li
+              class="chapter"
+              data-level="6.6"
+              data-path="debugging_tools.html"
+            >
+              <a href="debugging_tools.html"> Debugging Tools </a>
+            </li>
 
-            
-        </li>
-    
-        <li class="chapter " data-level="6.3" data-path="memory_allocation.html">
-            
-                <a href="memory_allocation.html">
-            
-                    
-                    Memory Allocation
-            
-                </a>
-            
+            <li
+              class="chapter"
+              data-level="6.7"
+              data-path="development_tools.html"
+            >
+              <a href="development_tools.html"> Development Tools </a>
+            </li>
 
-            
-        </li>
-    
-        <li class="chapter " data-level="6.4" data-path="virtual_address.html">
-            
-                <a href="virtual_address.html">
-            
-                    
-                    Virtual Address
-            
-                </a>
-            
+            <li class="chapter" data-level="6.8" data-path="hash_table.html">
+              <a href="hash_table.html"> Hash Table </a>
+            </li>
 
-            
-        </li>
-    
-        <li class="chapter " data-level="6.5" data-path="page_table.html">
-            
-                <a href="page_table.html">
-            
-                    
-                    Page Table
-            
-                </a>
-            
+            <li class="divider"></li>
 
-            
-        </li>
-    
-        <li class="chapter " data-level="6.6" data-path="debugging_tools.html">
-            
-                <a href="debugging_tools.html">
-            
-                    
-                    Debugging Tools
-            
-                </a>
-            
+            <li>
+              <a
+                href="https://www.gitbook.com"
+                target="blank"
+                class="gitbook-link"
+              >
+                Published with GitBook
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
-            
-        </li>
-    
-        <li class="chapter " data-level="6.7" data-path="development_tools.html">
-            
-                <a href="development_tools.html">
-            
-                    
-                    Development Tools
-            
-                </a>
-            
+      <div class="book-body">
+        <div class="body-inner">
+          <div class="book-header" role="navigation">
+            <!-- Title -->
+            <h1>
+              <i class="fa fa-circle-o-notch fa-spin"></i>
+              <a href="..">Synchronization</a>
+            </h1>
+          </div>
 
-            
-        </li>
-    
-        <li class="chapter " data-level="6.8" data-path="hash_table.html">
-            
-                <a href="hash_table.html">
-            
-                    
-                    Hash Table
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-
-    <li class="divider"></li>
-
-    <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
-        </a>
-    </li>
-</ul>
-
-
-                </nav>
-            
-        
-    </div>
-
-    <div class="book-body">
-        
-            <div class="body-inner">
-                
-                    
-
-<div class="book-header" role="navigation">
-    
-
-    <!-- Title -->
-    <h1>
-        <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Synchronization</a>
-    </h1>
-</div>
-
-
-
-
-                    <div class="page-wrapper" tabindex="-1" role="main">
-                        <div class="page-inner">
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
-                                <h1 id="synchronization">Synchronization</h1>
-<p>If sharing of resources between threads is not handled in a careful,
-controlled fasion, the result is usually a big mess. This is especially the case
-in operating system kernels, where faulty sharing can crash the entire machine.
-Pintos provides several synchronization primitives to help out.</p>
-<h2 id="disabling-interrupts">Disabling Interrupts</h2>
-<p>The crudest way to do synchronization is to disable interrupts, that is, to
-temporarily prevent the CPU from responding to interrupts. If interrupts are
-off, no other thread will preempt the running thread, because thread preemption
-is driven by the timer interrupt. If interrupts are on, as they normally are,
-then the running thread may be preempted by another at any time, whether between
-two C statements or even within the execution of one.</p>
-<p>Incidentally, this means that Pintos is a &quot;preemptible kernel,&quot; that is, kernel
-threads can be preempted at any time. Traditional Unix systems are
-&quot;nonpreemptible,&quot; that is, kernel threads can only be preempted at points where
-they explicitly call into the scheduler. (User programs can be preempted at any
-time in both models.) As you might imagine, preemptible kernels require more
-explicit synchronization.</p>
-<p>You should have little need to set the interrupt state directly. Most of the
-time you should use the other synchronization primitives described in the
-following sections. The main reason to disable interrupts is to synchronize
-kernel threads with external interrupt handlers, which cannot sleep and thus
-cannot use most other forms of synchronization.</p>
-<p>Some external interrupts cannot be postponed, even by disabling interrupts.
-These interrupts, called <strong>non-maskable interrupts</strong> (NMIs), are supposed to be
-used only in emergencies, e.g. when the computer is on fire. Pintos does not
-handle non-maskable interrupts.</p>
-<p>Types and functions for disabling and enabling interrupts are in
-<code>include/threads/interrupt.h</code>.</p>
-<hr>
-<pre><code class="lang-C"><span class="hljs-keyword">enum</span> intr_level;
+          <div class="page-wrapper" tabindex="-1" role="main">
+            <div class="page-inner">
+              <div id="book-search-results">
+                <div class="search-noresults">
+                  <section class="normal markdown-section">
+                    <h1 id="synchronization">Synchronization(동기화)</h1>
+                    <div>
+                      <h2>요약</h2>
+                      <p>
+                        문맥 교환(Context Switching)과 관련된
+                        동기화(Synchronization)는 운영체제에서 매우 중요한
+                        개념입니다. 특히, 스레드 간의 자원 공유를 제어하지
+                        않으면, 결과적으로 데이터의 불일치와 같은 문제가 발생할
+                        수 있습니다. 이를 방지하기 위해, Pintos는 여러 동기화
+                        원시(primitives)를 제공합니다.
+                      </p>
+                      <h3>동기화의 주요 방법</h3>
+                      <ol>
+                        <li>
+                          <b>인터럽트 비활성화(Disabling Interrupts)</b>: 가장
+                          간단한 동기화 방법은 CPU가 인터럽트에 반응하지 못하게
+                          하는 것입니다. 인터럽트가 비활성화되면, 타이머
+                          인터럽트에 의해 스레드 전환이 일어나지 않기 때문에,
+                          다른 스레드가 현재 실행 중인 스레드를 선점할 수
+                          없습니다. 그러나, 이 방법은 주로 커널 스레드와 외부
+                          인터럽트 핸들러 간의 동기화에 사용되며, 대부분의
+                          경우에는 다른 동기화 방법이 사용됩니다.
+                        </li>
+                        <li>
+                          <b>세마포어(Semaphores)</b>: 세마포어는 정수 값과 두
+                          개의 원자적 연산으로 구성된 동기화 메커니즘입니다.
+                          "Down" 또는 "P" 연산은 세마포어의 값이 양수가 될
+                          때까지 기다린 다음, 그 값을 감소시킵니다. "Up" 또는
+                          "V" 연산은 세마포어의 값을 증가시킵니다. 세마포어는
+                          리소스의 접근 제어나 이벤트의 발생을 기다리는 데
+                          사용될 수 있습니다.
+                        </li>
+                        <li>
+                          <b>락(Locks)</b>: 락은 세마포어와 유사하지만, 락을
+                          획득한 스레드만이 그것을 해제할 수 있는 추가적인
+                          제한이 있습니다. 락은 주로 한 스레드가 특정 자원을
+                          사용하고 있는 동안 다른 스레드가 그 자원을 사용하지
+                          못하게 하기 위해 사용됩니다.
+                        </li>
+                        <li>
+                          <b>모니터(Monitors)</b>: 모니터는 락과 조건 변수를
+                          결합한 더 높은 수준의 동기화 방법입니다. 모니터 내에서
+                          스레드는 보호되는 데이터에 접근하기 전에 모니터 락을
+                          획득해야 하며, 데이터에 대한 접근이 끝나면 락을
+                          해제합니다. 조건 변수는 스레드가 특정 조건이 충족될
+                          때까지 기다리게 할 수 있습니다.
+                        </li>
+                      </ol>
+                      <h3>동기화의 필요성</h3>
+                      <p>
+                        동기화는 운영체제에서 스레드가 안전하게 공유 자원에
+                        접근하도록 하여, 데이터의 일관성과 시스템의 안정성을
+                        유지하는 데 필수적입니다. 특히, PintOS와 같은 교육용
+                        운영체제에서는 이러한 동기화 기법을 직접 구현하고
+                        실험함으로써, 복잡한 멀티스레딩 환경에서 발생할 수 있는
+                        다양한 문제들을 이해하고 해결하는 방법을 학습할 수
+                        있습니다.
+                      </p>
+                      <p>
+                        PintOS를 학습하면서, 이러한 동기화 원시들을 어떻게
+                        사용하고, 특히 문맥 교환 과정에서 인터럽트 비 활성화,
+                        세마포어, 락, 모니터 등을 효과적으로 활용하여 스레드
+                        간의 안전한 자원 공유를 보장하는지에 대해 깊이 이해하는
+                        것이 중요합니다.
+                      </p>
+                    </div>
+                    <h2>본문</h2>
+                    <p>
+                      스레드 간 리소스 공유가 신중하고 통제된 방식으로 처리되지
+                      않으면 일반적으로 큰 혼란을 초래합니다. 특히 운영 체제
+                      커널의 경우 공유에 결함이 있으면 시스템 전체가 다운될 수
+                      있습니다. 핀토스는 이를 돕기 위해 몇 가지
+                      <a href="https://opennote46.tistory.com/118"
+                        >동기화 프리미티브</a
+                      >를 제공합니다.
+                    </p>
+                    <h2 id="disabling-interrupts">
+                      인터럽트 비활성화하기(Disabling Interrupts)
+                    </h2>
+                    <p>
+                      동기화를 수행하는 가장 조잡한 방법은 인터럽트를
+                      비활성화하는 것, 즉 CPU가 인터럽트에 일시적으로 응답하지
+                      못하도록 하는 것입니다. 인터럽트가 꺼져 있으면 스레드
+                      선점은 타이머 인터럽트에 의해 구동되므로 다른 스레드가
+                      실행 중인 스레드를 선점할 수 없습니다. 인터럽트가 켜져
+                      있으면 일반적으로 그렇듯이 실행 중인 스레드는 두 개의 C 문
+                      사이 또는 실행 중에도 언제든지 다른 스레드에 의해 선점될
+                      수 있습니다.
+                    </p>
+                    <p>
+                      덧붙여서, 이것은 핀토스가 "선점 가능한 커널"이라는 것을
+                      의미합니다. 즉, 커널 스레드는 언제든지 선점할 수 있습니다.
+                      기존 유닉스 시스템은 "비선점 가능", 즉 커널 스레드가
+                      스케줄러를 명시적으로 호출하는 지점에서만 커널 스레드를
+                      선점할 수 있습니다. (사용자 프로그램은 두 모델 모두에서
+                      언제든지 선점할 수 있습니다.) 상상할 수 있듯이, 선점
+                      가능한 커널은 보다 명시적인 동기화가 필요합니다.
+                    </p>
+                    <p>
+                      인터럽트 상태를 직접 설정할 필요는 거의 없습니다. 대부분의
+                      경우 다음 섹션에서 설명하는 다른
+                      <a href="https://opennote46.tistory.com/118"
+                        >동기화 프리미티브</a
+                      >를 사용해야 합니다. 인터럽트를 비활성화하는 주된 이유는
+                      커널 스레드를 외부 인터럽트 핸들러와 동기화하기
+                      위해서인데, 이 핸들러는 절전 상태가 될 수 없으므로
+                      대부분의 다른 형태의 동기화를 사용할 수 없습니다.
+                    </p>
+                    <p>
+                      일부 외부 인터럽트는 인터럽트를 비활성화해도 연기할 수
+                      없습니다. 이러한 인터럽트를 비마스킹 가능
+                      인터럽트(NMI)라고 하며, 컴퓨터가 불이 난 경우와 같은
+                      비상시에만 사용하도록 되어 있습니다. 핀토스는 비마스킹
+                      가능 인터럽트를 처리하지 않습니다.
+                    </p>
+                    <p>
+                      인터럽트를 비활성화 및 활성화하는 유형과 함수는
+                      <code>include/threads/interrupt.h</code>에 있습니다.
+                    </p>
+                    <hr />
+                    <pre><code class="lang-C"><span class="hljs-keyword">enum</span> intr_level;
 </code></pre>
-<blockquote>
-<p>One of INTR_OFF or INTR_ON, denoting that interrupts are disabled or
-enabled, resepectively.</p>
-</blockquote>
-<hr>
-<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">enum</span> intr_level <span class="hljs-title">intr_get_level</span> <span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+                    <blockquote>
+                      <p>
+                        인터럽트가 각각 비활성화 또는 활성화되었음을 나타내는
+                        INTR_OFF 또는 INTR_ON 중 하나입니다.
+                      </p>
+                    </blockquote>
+                    <hr />
+                    <pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">enum</span> intr_level <span class="hljs-title">intr_get_level</span> <span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
 </span></code></pre>
-<blockquote>
-<p>Returns the current interrupt state.</p>
-</blockquote>
-<hr>
-<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">enum</span> intr_level <span class="hljs-title">intr_set_level</span> <span class="hljs-params">(<span class="hljs-keyword">enum</span> intr_level level)</span></span>;
+                    <blockquote>
+                      <p>현재 인터럽트 상태를 반환합니다.</p>
+                    </blockquote>
+                    <hr />
+                    <pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">enum</span> intr_level <span class="hljs-title">intr_set_level</span> <span class="hljs-params">(<span class="hljs-keyword">enum</span> intr_level level)</span></span>;
 </code></pre>
-<blockquote>
-<p>Turns interrupts on or off according to level. Returns the previous interrupt
-state.</p>
-</blockquote>
-<hr>
-<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">enum</span> intr_level <span class="hljs-title">intr_enable</span> <span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>;
+                    <blockquote>
+                      <p>
+                        레벨에 따라 인터럽트를 켜거나 끕니다. 이전 인터럽트
+                        상태를 반환합니다.
+                      </p>
+                    </blockquote>
+                    <hr />
+                    <pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">enum</span> intr_level <span class="hljs-title">intr_enable</span> <span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>;
 </code></pre>
-<blockquote>
-<p>Turns interrupts on. Returns the previos interrupt state.</p>
-</blockquote>
-<hr>
-<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">enum</span> intr_level <span class="hljs-title">intr_disable</span> <span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>;
+                    <blockquote>
+                      <p>인터럽트를 켭니다. 이전 인터럽트 상태를 반환합니다.</p>
+                    </blockquote>
+                    <hr />
+                    <pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">enum</span> intr_level <span class="hljs-title">intr_disable</span> <span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>;
 </code></pre>
-<blockquote>
-<p>Turns interrupts off. Returns the previous interrupt state.</p>
-</blockquote>
-<h2 id="semaphores">Semaphores</h2>
-<p>A semaphore is a nonnegative interger together with two operators that
-manipulate it atomically, which are:</p>
-<ul>
-<li>&quot;Down&quot; or &quot;P&quot; : wait for the value to become positive, then decrement it.</li>
-<li>&quot;UP&quot; or &quot;V&quot;: increment the value (and wake up one waiting thread, if any).</li>
-</ul>
-<p>A semaphore initialized to 0 may be used to wait for an event that will happen
-exactly once. For example, suppose thread A starts another thread B and wants to
-wait for B to signal that some activity is complete. A can create a semaphore
-initialized to 0, pass it to B as it starts it, and then &quot;down&quot; the semaphore.
-When B finishes its activity, it &quot;ups&quot; the semaphore. This works regardless of
-whether A &quot;downs&quot; the semaphore or B &quot;ups&quot; it first.</p>
-<p>For example:</p>
-<pre><code class="lang-C"><span class="hljs-keyword">struct</span> semaphore sema;
+                    <blockquote>
+                      <p>인터럽트를 끕니다. 이전 인터럽트 상태를 반환합니다.</p>
+                    </blockquote>
+                    <h2 id="semaphores">세마포어(Semaphores)</h2>
+                    <p>
+                      세마포어는 음수가 아닌 인터거와 이를 원자적으로 조작하는
+                      두 개의 연산자를 합친 것으로, 다음과 같습니다.
+                    </p>
+                    <ul>
+                      <li>
+                        "Down" 또는 "P": 값이 양수가 될 때까지 기다린 다음 값을
+                        줄입니다.
+                      </li>
+                      <li>
+                        "UP" 또는 "V": 값을 증가시킵니다(대기 중인 스레드가 하나
+                        있으면 깨웁니다).
+                      </li>
+                    </ul>
+                    <p>
+                      0으로 초기화된 세마포어는 정확히 한 번만 발생하는 이벤트를
+                      기다리는 데 사용할 수 있습니다. 예를 들어 스레드 A가 다른
+                      스레드 B를 시작하고 B가 어떤 활동이 완료되었다는 신호를
+                      보낼 때까지 기다리려고 한다고 가정해 보겠습니다. A는 0으로
+                      초기화된 세마포어를 생성하고 이를 B가 시작할 때 전달한
+                      다음 세마포어를 "down"시킬 수 있습니다. B가 활동을
+                      완료하면 세마포어를 "ups"합니다. 이는 A가 세마포어를
+                      "downs"하든 B가 먼저 "ups"하든 상관없이 작동합니다.
+                    </p>
+                    <p>예를 들면 다음과 같습니다:</p>
+                    <pre><code class="lang-C"><span class="hljs-keyword">struct</span> semaphore sema;
 
-<span class="hljs-comment">/* Thread A */</span>
+<span class="hljs-comment">/* 스레드 A */</span>
 <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">threadA</span> <span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>{
     sema_down (&amp;sema);
 }
 
-<span class="hljs-comment">/* Thread B */</span>
+<span class="hljs-comment">/* 스레드 B */</span>
 <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">threadB</span> <span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>{
     sema_up (&amp;sema);
 }
 
-<span class="hljs-comment">/* main function */</span>
+<span class="hljs-comment">/* 메인 함수 */</span>
 <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">main</span> <span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>{
     sema_init (&amp;sema, <span class="hljs-number">0</span>);
     thread_create (<span class="hljs-string">&quot;threadA&quot;</span>, PRI_MIN, threadA, <span class="hljs-literal">NULL</span>);
     thread_create (<span class="hljs-string">&quot;threadB&quot;</span>, PRI_MIN, threadB, <span class="hljs-literal">NULL</span>);
 }
 </code></pre>
-<p>In this example, threadA stops execution at <code>sema_down ()</code> until threadB called
-<code>sema_up ()</code>.</p>
-<p>A semaphore initialized to 1 is typically used for controlling access to a
-resource. Before a block of code starts using the resource, it &quot;downs&quot; the
-semaphore, then after it is done with the resource it &quot;ups&quot; the resource. In
-such a case a lock, described below, may be more appropriate.</p>
-<p>Semaphores can also be initialized to values larger than 1. These are rarely
-used. Semaphores were invented by Edsger Dijkstra and first used in the THE
-operating system. Pintos&apos; semaphore type and operations are declared in
-<code>include/threads/synch.h</code>.</p>
-<hr>
-<pre><code class="lang-C"><span class="hljs-keyword">struct</span> semaphore;
+                    <p>
+                      이 예제에서 <code>threadA</code>는 <code>threadB</code>가
+                      <code>sema_up()</code>을 호출할 때까지
+                      <code>sema_down()</code>에서 실행을 중지합니다.
+                    </p>
+                    <p>
+                      1로 초기화된 세마포어는 일반적으로 리소스에 대한 액세스를
+                      제어하는 데 사용됩니다. 코드 블록이 리소스 사용을 시작하기
+                      전에 세마포어를 "downs"하고, 리소스 사용이 완료된 후에는
+                      리소스를 "Up"합니다. 이러한 경우 아래에 설명된 잠금이 더
+                      적합할 수 있습니다.
+                    </p>
+                    <p>
+                      세마포어는 1보다 큰 값으로 초기화할 수도 있지만, 거의
+                      사용되지 않습니다. 세마포어는 에드거 디크스트라(Edsger
+                      Dijkstra)가 발명했으며, THE 운영체제에서 처음
+                      사용되었습니다. 핀토스의 세마포어 유형과 연산은
+                      <code>include/threads/synch.h</code>에 선언되어 있습니다.
+                    </p>
+                    <hr />
+                    <pre><code class="lang-C"><span class="hljs-keyword">struct</span> semaphore;
 </code></pre>
-<blockquote>
-<p>Represents a semaphore.</p>
-</blockquote>
-<hr>
-<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">sema_init</span> <span class="hljs-params">(<span class="hljs-keyword">struct</span> semaphore *sema, <span class="hljs-keyword">unsigned</span> value)</span></span>;
+                    <blockquote>
+                      <p>세마포어를 나타냅니다.</p>
+                    </blockquote>
+                    <hr />
+                    <pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">sema_init</span> <span class="hljs-params">(<span class="hljs-keyword">struct</span> semaphore *sema, <span class="hljs-keyword">unsigned</span> value)</span></span>;
 </code></pre>
-<blockquote>
-<p>Initializes sema as a new semaphore with the given initial value.</p>
-</blockquote>
-<hr>
-<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">sema_down</span> <span class="hljs-params">(<span class="hljs-keyword">struct</span> semaphore *sema)</span></span>;
+                    <blockquote>
+                      <p>
+                        주어진 초기값을 사용하여 세마를 새 세마포어로
+                        초기화합니다.
+                      </p>
+                    </blockquote>
+                    <hr />
+                    <pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">sema_down</span> <span class="hljs-params">(<span class="hljs-keyword">struct</span> semaphore *sema)</span></span>;
 </code></pre>
-<p>Executes the &quot;down&quot; or &quot;P&quot; operation on sema, waiting for its value to become
-positive and then decrementing it by one.</p>
-<hr>
-<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">sema_try_down</span> <span class="hljs-params">(<span class="hljs-keyword">struct</span> semaphore *sema)</span></span>;
+                    <blockquote>
+                      <p>
+                        세마에서 "down" 또는 "P" 연산을 실행하여 값이 양수가 될
+                        때까지 기다린 다음 1씩 감소시킵니다.
+                      </p>
+                    </blockquote>
+                    <hr />
+                    <pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">sema_try_down</span> <span class="hljs-params">(<span class="hljs-keyword">struct</span> semaphore *sema)</span></span>;
 </code></pre>
-<blockquote>
-<p>Tries to execute the &quot;down&quot; or &quot;P&quot; operation on sema, without waiting. Returns
-true if sema was successfully decremented, or false if it was already zero and
-thus could not be decremented without waiting. Calling this function in a
-tight loop wastes CPU time, so use <code>sema_down()</code> or find a different approach
-instead.</p>
-</blockquote>
-<hr>
-<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">sema_up</span> <span class="hljs-params">(<span class="hljs-keyword">struct</span> semaphore *sema)</span></span>;
+                    <blockquote>
+                      <p>
+                        기다리지 않고 세마에서 "down" 또는 "P" 연산을 실행하려고
+                        시도합니다. sema가 성공적으로 감소하면 참을 반환하고,
+                        이미 0이어서 대기 없이 감소할 수 없는 경우 거짓을
+                        반환합니다. 이 함수를 타이트 루프에서 호출하면 CPU
+                        시간이 낭비되므로 <code>sema_down()</code>을 사용하거나
+                        다른 방법을 찾아보세요.
+                      </p>
+                    </blockquote>
+                    <hr />
+                    <pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">sema_up</span> <span class="hljs-params">(<span class="hljs-keyword">struct</span> semaphore *sema)</span></span>;
 </code></pre>
-<blockquote>
-<p>Executes the &quot;up&quot; or &quot;V&quot; operation on sema, incrementing its value. If any
-threads are waiting on sema, wakes one of them up. Unlike most synchronization
-primitives, <code>sema_up()</code> may be called inside an external interrupt handler.</p>
-</blockquote>
-<p>Semaphores are internally built out of disabling interrupt
-(see <a href="#Disabling%20Interrupts">Disabling Interrupts</a>) and thread blocking and
-unblocking (<code>thread_block()</code> and <code>thread_unblock()</code>). Each semaphore maintains
-a list of waiting threads, using the linked list implementation in
-<code>lib/kernel/list.c</code>.</p>
-<h2 id="locks">Locks</h2>
-<p>A lock is like a semaphore with an initial value of 1
-(see <a href="#Semaphores">Semaphores</a>). A lock&apos;s equivalent of &quot;up&quot; is called
-&quot;release&quot;, and the &quot;down&quot; operation is called &quot;acquire&quot;.</p>
-<p>Compared to a semaphore, a lock has one added restriction: only the trhead that
-acquires a lock, called the lock&apos;s &quot;owner&quot;, is allowed to release it. If this
-restriction is a problem, it&apos;s a good sign that a semaphore should be used,
-instead of a lock.</p>
-<p>Locks in Pintos are not &quot;recursive,&quot; that is, it is an error for the thread
-currently holding a lock to try to acquire that lock.
-Lock types and functions are declared in <code>include/threads/synch.h</code>.</p>
-<hr>
-<pre><code class="lang-C"><span class="hljs-keyword">struct</span> lock;
+                    <blockquote>
+                      <p>
+                        세마에서 "up" 또는 "V" 연산을 실행하여 값을
+                        증가시킵니다. sema에서 대기 중인 스레드가 있으면 그 중
+                        하나를 깨웁니다. 대부분의 동기화 프리미티브와 달리
+                        <code>sema_up()</code>은 외부 인터럽트 핸들러 내부에서
+                        호출할 수 있습니다.
+                      </p>
+                    </blockquote>
+                    <p>
+                      세마포어는 내부적으로 인터럽트 비활성화(<a
+                        href="./synchronization.html#Disabling%20Interrupts"
+                        >인터럽트 비활성화 </a
+                      >참조)와 스레드 차단 및 차단 해제(<code
+                        >thread_block()</code
+                      >
+                      및 <code>thread_unblock()</code>)로 구축됩니다. 각
+                      세마포어는 <code>lib/kernel/list.c</code>의 링크된 리스트
+                      구현을 사용하여 대기 중인 스레드 목록을 유지합니다.
+                    </p>
+                    <h2 id="locks">락(Locks)</h2>
+                    <p>
+                      락은 초기값이 1인 세마포어와 같습니다(<a
+                        href="./synchronization.html#Semaphores"
+                        >세마포어</a
+                      >
+                      참조). 잠금의 "up"에 해당하는 동작을 "release(해제)"라고
+                      하고, "down"에 해당하는 동작을 "acquire(획득)"이라고
+                      합니다.
+                    </p>
+                    <p>
+                      세마포어에 비해 잠금에는 한 가지 제한이 추가되는데, 잠금을
+                      획득한 스레드, 즉 잠금의 "소유자"만이 잠금을 해제할 수
+                      있다는 것입니다. 이 제한이 문제가 된다면 락 대신
+                      세마포어를 사용해야 한다는 좋은 신호입니다.
+                    </p>
+                    <p>
+                      핀토스의 락은 "재귀적"이 아니므로 현재 락을 걸고 있는
+                      스레드가 해당 락을 획득하려고 시도하는 것은 오류입니다. 락
+                      유형과 함수는 <code>include/threads/synch.h</code>에
+                      선언되어 있습니다.
+                    </p>
+                    <hr />
+                    <pre><code class="lang-C"><span class="hljs-keyword">struct</span> lock;
 </code></pre>
-<blockquote>
-<p>Represents a lock.</p>
-</blockquote>
-<hr>
-<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">lock_init</span> <span class="hljs-params">(<span class="hljs-keyword">struct</span> lock *lock)</span></span>;
+                    <blockquote>
+                      <p>락을 나타냅니다.</p>
+                    </blockquote>
+                    <hr />
+                    <pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">lock_init</span> <span class="hljs-params">(<span class="hljs-keyword">struct</span> lock *lock)</span></span>;
 </code></pre>
-<blockquote>
-<p>Initializes lock as a new lock. The lock is not initially owned by any thread.</p>
-</blockquote>
-<hr>
-<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">lock_acquire</span> <span class="hljs-params">(<span class="hljs-keyword">struct</span> lock *lock)</span></span>;
+                    <blockquote>
+                      <p>
+                        락을 새 락으로 초기화합니다. 이 락은 처음에 어떤
+                        스레드도 소유하지 않습니다.
+                      </p>
+                    </blockquote>
+                    <hr />
+                    <pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">lock_acquire</span> <span class="hljs-params">(<span class="hljs-keyword">struct</span> lock *lock)</span></span>;
 </code></pre>
-<blockquote>
-<p>Acquires lock for the current thread, first waiting for any current owner to
-release it if necessary.</p>
-</blockquote>
-<hr>
-<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">lock_try_acquire</span> <span class="hljs-params">(<span class="hljs-keyword">struct</span> lock *lock)</span></span>;
+                    <blockquote>
+                      <p>
+                        현재 스레드에 대한 락을 획득하고, 필요한 경우 현재
+                        소유자가 락을 해제할 때까지 기다립니다.
+                      </p>
+                    </blockquote>
+                    <hr />
+                    <pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">lock_try_acquire</span> <span class="hljs-params">(<span class="hljs-keyword">struct</span> lock *lock)</span></span>;
 </code></pre>
-<blockquote>
-<p>Tries to acquire lock for use by the current thread, without waiting. Returns
-true if successful, false if the lock is already owned. Calling this function
-in a tight loop is a bad idea because it wastes CPU time, so use
-<code>lock_acquire()</code> instead.</p>
-</blockquote>
-<hr>
-<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">lock_release</span> <span class="hljs-params">(<span class="hljs-keyword">struct</span> lock *lock)</span></span>;
+                    <blockquote>
+                      <p>
+                        현재 스레드에서 사용할 락을 대기하지 않고 획득하려고
+                        시도합니다. 성공하면 참을 반환하고, 락이 이미 소유된
+                        경우 거짓을 반환합니다. 이 함수를 타이트 루프에서
+                        호출하는 것은 CPU 시간을 낭비하므로 좋지 않으므로 대신
+                        <code>lock_acquire()</code>를 사용하세요.
+                      </p>
+                    </blockquote>
+                    <hr />
+                    <pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">lock_release</span> <span class="hljs-params">(<span class="hljs-keyword">struct</span> lock *lock)</span></span>;
 </code></pre>
-<blockquote>
-<p>Releases lock, which the current thread must own.</p>
-</blockquote>
-<hr>
-<pre><code class="lang-C">bool lock_held_by_current_thread (const struct lock *lock):
+                    <blockquote>
+                      <p>현재 스레드가 소유해야 하는 락을 해제합니다.</p>
+                    </blockquote>
+                    <hr />
+                    <pre><code class="lang-C">bool lock_held_by_current_thread (const struct lock *lock):
 </code></pre>
-<blockquote>
-<p>Returns true if the running thread owns lock, false otherwise. There is no
-function to test whether an arbitrary thread owns a lock, because the answer
-could change before the caller could act on it.</p>
-</blockquote>
-<h2 id="monitors">Monitors</h2>
-<p>A monitor is a higher-level form of synchronization than a semaphore or a lock.
-A monitor consists of data being synchronized, plus a lock, called the monitor
-lock, and one or more condition variables. Before it accesses the protected
-data, a thread first acquires the monitor lock. It is then said to be
-&quot;in the monitor&quot;. While in the monitor, the thread has control over all the
-protected data, which it may freely examine or modify. When access to the
-protected data is complete, it releases the monitor lock.</p>
-<p>Condition variables allow code in the monitor to wait for a condition to become
-true. Each condition variable is associated with an abstract condition, e.g.
-&quot;some data has arrived for processing&quot; or &quot;over 10 seconds has passed since the
-user&apos;s last keystroke&quot;. When code in the monitor needs to wait for a condition
-to become true, it &quot;waits&quot; on the associated condition variable, which releases
-the lock and waits for the condition to be signaled. If, on the other hand, it
-has caused one of these conditions to become true, it &quot;signals&quot; the condition to
-wake up one waiter, or &quot;broadcasts&quot; the condition to wake all of them.</p>
-<p>The theoretical framework for monitors was laid out by C.A.R.Hoare. Their
-practical usage was later elaborated in a paper on the Mesa operation system.
-Condition variable types and functions are declared in
-<code>include/threads/synch.h</code>.</p>
-<hr>
-<pre><code class="lang-C"><span class="hljs-keyword">struct</span> condition;
+                    <blockquote>
+                      <p>
+                        실행 중인 스레드가 락을 소유하고 있으면 참을 반환하고,
+                        그렇지 않으면 거짓을 반환합니다. 임의의 스레드가 락을
+                        소유하고 있는지 테스트하는 함수는 없습니다. 호출자가
+                        조치를 취하기 전에 응답이 변경될 수 있기 때문입니다.
+                      </p>
+                    </blockquote>
+                    <h2 id="monitors">모니터(Monitors)</h2>
+                    <p>
+                      모니터는 세마포어나 락보다 더 높은 수준의 동기화
+                      형태입니다. 모니터는 동기화되는 데이터와 모니터 락이라고
+                      하는 락, 그리고 하나 이상의 조건 변수로 구성됩니다.
+                      스레드는 보호된 데이터에 액세스하기 전에 먼저 모니터 락을
+                      획득합니다. 그런 다음 "모니터에 있다"고 합니다. 모니터에
+                      있는 동안 스레드는 모든 보호된 데이터에 대한 제어권을
+                      가지며, 이를 자유롭게 검토하거나 수정할 수 있습니다.
+                      보호된 데이터에 대한 액세스가 완료되면 모니터 락이
+                      해제됩니다.
+                    </p>
+                    <p>
+                      조건 변수를 사용하면 모니터의 코드가 조건이 참이 될 때까지
+                      기다릴 수 있습니다. 각 조건 변수는 "일부 데이터가 처리를
+                      위해 도착함" 또는 "사용자의 마지막 키 입력 후 10초 이상
+                      경과" 등의 추상적인 조건과 연관됩니다. 모니터의 코드가
+                      조건이 참이 될 때까지 기다려야 하는 경우, 연결된 조건
+                      변수에 '대기'하여 잠금을 해제하고 조건이 신호가 될 때까지
+                      기다립니다. 반면에 이러한 조건 중 하나가 참이 되면 조건에
+                      '신호'를 보내 한 명의 대기자를 깨우거나 조건을
+                      '브로드캐스트'하여 모든 대기자를 깨웁니다.
+                    </p>
+                    <p>
+                      모니터에 대한 이론적 틀은 C.A.R.Hoare에 의해
+                      마련되었습니다. 실제 사용법은 나중에 Mesa 운영 체제에 관한
+                      논문에서 자세히 설명했습니다. 조건 변수 유형과 함수는
+                      <code>include/threads/synch.h</code>에 선언되어 있습니다.
+                    </p>
+                    <hr />
+                    <pre><code class="lang-C"><span class="hljs-keyword">struct</span> condition;
 </code></pre>
-<blockquote>
-<p>Represents a condition variable.</p>
-</blockquote>
-<hr>
-<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">cond_init</span> <span class="hljs-params">(<span class="hljs-keyword">struct</span> condition *cond)</span></span>;
+                    <blockquote>
+                      <p>조건 변수를 나타냅니다.</p>
+                    </blockquote>
+                    <hr />
+                    <pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">cond_init</span> <span class="hljs-params">(<span class="hljs-keyword">struct</span> condition *cond)</span></span>;
 </code></pre>
-<blockquote>
-<p>Initializes cond as a new condition variable.</p>
-</blockquote>
-<hr>
-<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">cond_wait</span> <span class="hljs-params">(<span class="hljs-keyword">struct</span> condition *cond, <span class="hljs-keyword">struct</span> lock *lock)</span></span>;
+                    <blockquote>
+                      <p><code>cond</code>를 새 조건 변수로 초기화합니다.</p>
+                    </blockquote>
+                    <hr />
+                    <pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">cond_wait</span> <span class="hljs-params">(<span class="hljs-keyword">struct</span> condition *cond, <span class="hljs-keyword">struct</span> lock *lock)</span></span>;
 </code></pre>
-<blockquote>
-<p>Atomically releases lock (the monitor lock) and waits for cond to be signaled
-by some other piece of code. After cond is signaled, reacquires lock before
-returning. lock must be held before calling this function. Sending a signal
-and waking up from a wait are not an atomic operation. Thus, typically
-<code>cond_wait()</code>&apos;s caller must recheck the condition after the wait completes
-and, if necessary, wait again. See the next section for an example.</p>
-</blockquote>
-<hr>
-<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">cond_signal</span> <span class="hljs-params">(<span class="hljs-keyword">struct</span> condition *cond, <span class="hljs-keyword">struct</span> lock *lock)</span></span>;
+                    <blockquote>
+                      <p>
+                        원자적으로 락(모니터 락)을 해제하고 다른 코드에서 cond
+                        신호가 올 때까지 기다립니다. cond가 신호를 받은 후
+                        반환하기 전에 락을 다시 획득합니다. 이 함수를 호출하기
+                        전에 락을 유지해야 합니다. 신호를 보내고 대기 상태에서
+                        깨어나는 것은 원자적인 연산이 아닙니다. 따라서
+                        일반적으로 <code>cond_wait()</code>의 호출자는 대기가
+                        완료된 후 조건을 다시 확인하고 필요한 경우 다시 대기해야
+                        합니다. 예시는 다음 섹션을 참조하세요.
+                      </p>
+                    </blockquote>
+                    <hr />
+                    <pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">cond_signal</span> <span class="hljs-params">(<span class="hljs-keyword">struct</span> condition *cond, <span class="hljs-keyword">struct</span> lock *lock)</span></span>;
 </code></pre>
-<blockquote>
-<p>If any threads are waiting on cond (protected by monitor lock lock), then this
-function wakes up one of them. If no threads are waiting, returns without
-performing any action. lock must be held before calling this function.</p>
-</blockquote>
-<hr>
-<pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">cond_broadcast</span> <span class="hljs-params">(<span class="hljs-keyword">struct</span> condition *cond, <span class="hljs-keyword">struct</span> lock *lock)</span></span>;
+                    <blockquote>
+                      <p>
+                        대기 중인 스레드가 있는 경우(모니터 락으로 보호됨), 이
+                        함수는 그 중 하나를 깨웁니다. 대기 중인 스레드가 없으면
+                        아무 작업도 수행하지 않고 반환합니다. 이 함수를 호출하기
+                        전에 락을 유지해야 합니다.
+                      </p>
+                    </blockquote>
+                    <hr />
+                    <pre><code class="lang-C"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">cond_broadcast</span> <span class="hljs-params">(<span class="hljs-keyword">struct</span> condition *cond, <span class="hljs-keyword">struct</span> lock *lock)</span></span>;
 </code></pre>
-<blockquote>
-<p>Wakes up all threads, if any, waiting on cond (protected by monitor lock
-lock). lock must be held before calling this function.</p>
-</blockquote>
-<h3 id="monitor-example">Monitor Example</h3>
-<p>The classical example of a monitor is handling a buffer into which one or more
-&quot;producer&quot; threads write characters and out of which one or more &quot;consumer&quot;
-threads read characters. To implement this we need, besides the monitor lock,
-two condition variables which we will call <code>not_full</code> and <code>not_empty</code>:</p>
-<pre><code class="lang-C">    <span class="hljs-keyword">char</span> buf[BUF_SIZE];     <span class="hljs-comment">/* Buffer. */</span>
-    <span class="hljs-keyword">size_t</span> n = <span class="hljs-number">0</span>;         <span class="hljs-comment">/* 0 &lt;= n &lt;= BUF SIZE: # of characters in buffer. */</span>
-    <span class="hljs-keyword">size_t</span> head = <span class="hljs-number">0</span>;        <span class="hljs-comment">/* buf index of next char to write (mod BUF SIZE). */</span>
-    <span class="hljs-keyword">size_t</span> tail = <span class="hljs-number">0</span>;         <span class="hljs-comment">/* buf index of next char to read (mod BUF SIZE). */</span>
-    <span class="hljs-keyword">struct</span> lock lock;         <span class="hljs-comment">/* Monitor lock. */</span>
-    <span class="hljs-keyword">struct</span> condition not_empty; <span class="hljs-comment">/* Signaled when the buffer is not empty. */</span>
-    <span class="hljs-keyword">struct</span> condition not_full;     <span class="hljs-comment">/* Signaled when the buffer is not full. */</span>
+                    <blockquote>
+                      <p>
+                        상태 대기 중인 모든 스레드가 있으면 깨웁니다(모니터
+                        락으로 보호됨). 이 함수를 호출하기 전에 락 상태를
+                        유지해야 합니다.
+                      </p>
+                    </blockquote>
+                    <h3 id="monitor-example">Monitor Example(모니터 예시)</h3>
+                    <p>
+                      모니터의 고전적인 예는 하나 이상의 "생산자" 스레드가
+                      문자를 쓰고 하나 이상의 "소비자" 스레드가 문자를 읽는
+                      버퍼를 처리하는 것입니다. 이를 구현하려면 모니터 락 외에
+                      <code>not_full</code>과 <code>not_empty</code>라는 두 개의
+                      조건 변수가 필요합니다:
+                    </p>
+                    <pre><code class="lang-C">    <span class="hljs-keyword">char</span> buf[BUF_SIZE];     <span class="hljs-comment">/* 버퍼 */</span>
+    <span class="hljs-keyword">size_t</span> n = <span class="hljs-number">0</span>;         <span class="hljs-comment">/* 0 &lt;= n &lt;= BUF SIZE: 버퍼의 문자 수 */</span>
+    <span class="hljs-keyword">size_t</span> head = <span class="hljs-number">0</span>;        <span class="hljs-comment">/* 쓸 다음 문자의 BUF 인덱스(mod BUF SIZE) */</span>
+    <span class="hljs-keyword">size_t</span> tail = <span class="hljs-number">0</span>;         <span class="hljs-comment">/* 읽을 다음 문자의 BUF 인덱스(mod BUF SIZE) */</span>
+    <span class="hljs-keyword">struct</span> lock lock;         <span class="hljs-comment">/* 모니터 락 */</span>
+    <span class="hljs-keyword">struct</span> condition not_empty; <span class="hljs-comment">/* 버퍼가 비어 있지 않을 때 신호를 보냄 */</span>
+    <span class="hljs-keyword">struct</span> condition not_full;     <span class="hljs-comment">/* 버퍼가 가득 차 있지 않을 때 신호를 보냄 */</span>
 
-    ...initialize the locks and condition variables...
+    ...락 및 조건 변수를 초기화합니다...
 
     <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">put</span> <span class="hljs-params">(<span class="hljs-keyword">char</span> ch)</span> </span>{
       lock_acquire (&amp;lock);
-      <span class="hljs-keyword">while</span> (n == BUF_SIZE)    <span class="hljs-comment">/* Can&apos;t add to buf as long as it&apos;s full. */</span>
+      <span class="hljs-keyword">while</span> (n == BUF_SIZE)    <span class="hljs-comment">/* 버퍼가 가득 차 있는 한 추가할 수 없음 */</span>
         cond_wait (&amp;not_full, &amp;lock);
-      buf[head++ % BUF_SIZE] = ch;    <span class="hljs-comment">/* Add ch to buf. */</span>
+      buf[head++ % BUF_SIZE] = ch;    <span class="hljs-comment">/* 버퍼에 ch를 추가 */</span>
       n++;
-      cond_signal (&amp;not_empty, &amp;lock);    <span class="hljs-comment">/* buf can&apos;t be empty anymore. */</span>
+      cond_signal (&amp;not_empty, &amp;lock);    <span class="hljs-comment">/* 버퍼는 더 이상 비어있을 수 없음 */</span>
       lock_release (&amp;lock);
     }
 
     <span class="hljs-function"><span class="hljs-keyword">char</span> <span class="hljs-title">get</span> <span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>{
       <span class="hljs-keyword">char</span> ch;
       lock_acquire (&amp;lock);
-      <span class="hljs-keyword">while</span> (n == <span class="hljs-number">0</span>)        <span class="hljs-comment">/* Can&apos;t read buf as long as it&apos;s empty. */</span>
+      <span class="hljs-keyword">while</span> (n == <span class="hljs-number">0</span>)        <span class="hljs-comment">/* 비어 있는 동안에는 버퍼를 읽을 수 없음 */</span>
         cond_wait (&amp;not_empty, &amp;lock);
-      ch = buf[tail++ % BUF_SIZE];    <span class="hljs-comment">/* Get ch from buf. */</span>
+      ch = buf[tail++ % BUF_SIZE];    <span class="hljs-comment">/* 버퍼에서 ch를 가져옴 */</span>
       n--;
-      cond_signal (&amp;not_full, &amp;lock);    <span class="hljs-comment">/* buf can&apos;t be full anymore. */</span>
+      cond_signal (&amp;not_full, &amp;lock);    <span class="hljs-comment">/* 더 이상 가득 찰 수 없음 */</span>
       lock_release (&amp;lock);
     }
 </code></pre>
-<p>Note that <code>BUF_SIZE</code> must divide evenly into <code>SIZE_MAX + 1</code> for the above code
-to be completely correct. Otherwise, it will fail the first time <code>head</code> wraps
-around to 0. In practice, <code>BUF_SIZE</code> would ordinarily be a power of 2.</p>
-<h2 id="optimization-barriers">Optimization Barriers</h2>
-<p>An optimization barrier is a special statement that prevents the compiler from
-making assumptions about the state of memory across the barrier. The compiler
-will not reorder reads or writes of variables across the barrier or assume that
-a variable&apos;s value is unmodified across the barrier, except for local variables
-whose address is never taken. In Pintos, <code>include/threads/synch.h</code> defines the
-<code>barrier()</code> macro as an optimization barrier.</p>
-<p>One reason to use an optimization barrier is when data can change
-asynchronously, without the compiler&apos;s knowledge, e.g. by another thread or an
-interrupt handler. The <code>too_many_loops()</code> function in <code>devices/timer.c</code> is an
-example. This function starts out by busy-waiting in a loop until a timer tick
-occurs:</p>
-<pre><code class="lang-C">    <span class="hljs-comment">/* Wait for a timer tick. */</span>
+                    <p>
+                      위의 코드가 완전히 올바르게 되려면 <code>BUF_SIZE</code>가
+                      <code>SIZE_MAX + 1</code>로 균등하게 나뉘어야 합니다.
+                      그렇지 않으면 <code>head</code>가 0으로 처음 랩핑될 때
+                      실패합니다. 실제로 <code>BUF_SIZE</code>는 일반적으로 2의
+                      거듭제곱이 됩니다.
+                    </p>
+                    <h2 id="optimization-barriers">
+                      Optimization Barriers(최적화 배리어)
+                    </h2>
+                    <p>
+                      최적화 배리어는 컴파일러가 배리어를 가로지르는 메모리
+                      상태에 대해 가정하지 못하도록 하는 특수 문입니다.
+                      컴파일러는 배리어를 가로질러 변수의 읽기 또는 쓰기 순서를
+                      바꾸거나, 주소를 가져가지 않는 로컬 변수를 제외하고는
+                      배리어를 가로질러 변수 값이 수정되지 않는다고 가정하지
+                      않습니다. 핀토스에서
+                      <code>include/threads/synch.h</code>는
+                      <code>barrier()</code> 매크로를 최적화 배리어로
+                      정의합니다.
+                    </p>
+                    <p>
+                      최적화 배리어를 사용하는 한 가지 이유는 컴파일러가 모르는
+                      사이에 다른 스레드나 인터럽트 핸들러에 의해 데이터가
+                      비동기적으로 변경될 수 있는 경우입니다.
+                      <code>devices/timer.c</code>의
+                      <code>too_many_loops()</code> 함수가 그 예입니다. 이
+                      함수는 타이머 틱이 발생할 때까지 루프에서 바쁘게
+                      대기(busy-waiting)하는 것으로 시작합니다:
+                    </p>
+                    <pre><code class="lang-C">    <span class="hljs-comment">/* 타이머가 울릴 때까지 기다림 */</span>
     <span class="hljs-keyword">int64_t</span> start = ticks;
     <span class="hljs-keyword">while</span> (ticks == start)
         barrier();
 </code></pre>
-<p>Without an optimization barrier in the loop, the compiler could conclude that
-the loop would never terminate, because <code>start</code> and <code>ticks</code> start out equal and
-the loop itself never changes them. It could then &quot;optimize&quot; the function into
-an infinite loop, which would definitely be undesirable.</p>
-<p>Optimization barriers can be used to avoid other compiler optimizations. The
-<code>busy_wait()</code> function, also in <code>devices/timer.c</code>, is an example. It contains
-this loop:</p>
-<pre><code class="lang-C">    <span class="hljs-keyword">while</span> (loops-- &gt; <span class="hljs-number">0</span>)
+                    <p>
+                      루프에 최적화 배리어가 없으면 컴파일러는
+                      <code>start</code>와 <code>ticks</code>가 동일하게
+                      시작하고 루프 자체가 이를 변경하지 않기 때문에 루프가 절대
+                      종료되지 않는다고 결론을 내릴 수 있습니다. 그러면 함수를
+                      무한 루프로 '최적화'할 수 있는데, 이는 분명 바람직하지
+                      않습니다.
+                    </p>
+                    <p>
+                      최적화 배리어는 다른 컴파일러 최적화를 피하기 위해 사용할
+                      수 있습니다. <code>devices/timer.c</code>에 있는
+                      <code>busy_wait()</code> 함수가 그 예입니다. 여기에는 이
+                      루프가 포함되어 있습니다:
+                    </p>
+                    <pre><code class="lang-C">    <span class="hljs-keyword">while</span> (loops-- &gt; <span class="hljs-number">0</span>)
       barrier ();
 </code></pre>
-<p>The goal of this loop is to busy-wait by counting loops down from its original
-value to 0. Without the barrier, the compiler could delete the loop entirely,
-because it produces no useful output and has no side effects. The barrier forces
-the compiler to pretend that the loop body has an important effect.</p>
-<p>Finally, optimization barriers can be used to force the ordering of memory reads
-or writes. For example, suppose we add a &quot;feature&quot; that, whenever a timer
-interrupt occurs, the character in global variable <code>timer_put_char</code> is printed
-on the console, but only if global Boolean variable <code>timer_do_put</code> is true. The
-best way to set up <code>x</code> to be printed is then to use an optimization barrier,
-like this:</p>
-<pre><code class="lang-C">    timer_put_char = <span class="hljs-string">&apos;x&apos;</span>;
+                    <p>
+                      이 루프의 목표는 루프를 원래 값에서 0까지 카운트 다운하여
+                      바쁘게 대기하는 것입니다. 배리어가 없으면 컴파일러는
+                      유용한 출력을 생성하지 않고 부작용이 없으므로 루프를
+                      완전히 삭제할 수 있습니다. 배리어는 컴파일러가 루프 본문에
+                      중요한 효과가 있는 것처럼 가장하도록 강제합니다.
+                    </p>
+                    <p>
+                      마지막으로 최적화 배리어를 사용하여 메모리 읽기 또는 쓰기
+                      순서를 강제할 수 있습니다. 예를 들어 타이머 인터럽트가
+                      발생할 때마다 전역 변수 timer_put_char의 문자가 콘솔에
+                      출력되는 '기능'을 추가한다고 가정해 보겠습니다(단, 전역
+                      부울 변수 timer_do_put이 true인 경우에만). 출력되도록
+                      설정하는 가장 좋은 방법은 다음과 같이 최적화 배리어를
+                      사용하는 것입니다:
+                    </p>
+                    <pre><code class="lang-C">    timer_put_char = <span class="hljs-string">&apos;x&apos;</span>;
     barrier ();
     timer_do_put = <span class="hljs-literal">true</span>;
 </code></pre>
-<p>Without the barrier, the code is buggy because the compiler is free to reorder
-operations when it doesn&apos;t see a reason to keep them in the same order. In this
-case, the compiler doesn&apos;t know that the order of assignments is important, so
-its optimizer is permitted to exchange their order. There&apos;s no telling whether
-it will actually do this, and it is possible that passing the compiler different
-optimization flags or using a different version of the compiler will produce
-different behavior.</p>
-<p>Another solution is to disable interrupts around the assignments. This does not
-prevent reordering, but it prevents the interrupt handler from intervening
-between the assignments. It also has the extra runtime cost of disabling and
-re-enabling interrupts:</p>
-<pre><code class="lang-C">    <span class="hljs-keyword">enum</span> intr_level old_level = intr_disable ();
+                    <p>
+                      배리어가 없으면 컴파일러가 연산을 동일한 순서로 유지할
+                      이유가 없을 때 자유롭게 순서를 바꿀 수 있기 때문에 코드에
+                      버그가 발생합니다. 이 경우 컴파일러는 할당 순서가
+                      중요하다는 것을 모르기 때문에 최적화 프로그램이 순서를
+                      바꿀 수 있습니다. 실제로 이렇게 할지는 알 수 없으며,
+                      컴파일러에 다른 최적화 플래그를 전달하거나 다른 버전의
+                      컴파일러를 사용하면 다른 동작이 발생할 수 있습니다.
+                    </p>
+                    <p>
+                      또 다른 해결책은 할당 주변에서 인터럽트를 비활성화하는
+                      것입니다. 이 방법은 재정렬을 막지는 못하지만 인터럽트
+                      핸들러가 할당 사이에 개입하는 것을 방지합니다. 또한
+                      인터럽트를 비활성화했다가 다시 활성화할 때 런타임 비용이
+                      추가로 발생합니다:
+                    </p>
+                    <pre><code class="lang-C">    <span class="hljs-keyword">enum</span> intr_level old_level = intr_disable ();
     timer_put_char = <span class="hljs-string">&apos;x&apos;</span>;
     timer_do_put = <span class="hljs-literal">true</span>;
     intr_set_level (old_level);
 </code></pre>
-<p>A second solution is to mark the declarations of <code>timer_put_char</code> and
-<code>timer_do_put</code> as <code>volatile</code>. This keyword tells the compiler that the variables
-are externally observable and restricts its latitude for optimization. However,
-the semantics of <code>volatile</code> are not well defined, so it is not a good general
-solution. The base Pintos code does not use <code>volatile</code> at all.</p>
-<p>The following is not a solution, because locks neither prevent interrupts nor
-prevent the compiler from reordering the code within the region where the lock
-is held:</p>
-<pre><code class="lang-C">    lock_acquire (&amp;timer_lock);        <span class="hljs-comment">/* INCORRECT CODE */</span>
+                    <p>
+                      두 번째 해결책은 <code>timer_put_char</code> 및
+                      <code>timer_do_put</code>의 선언을
+                      <code>volatile</code>으로 표시하는 것입니다. 이 키워드는
+                      컴파일러에게 해당 변수가 외부에서 관찰할 수 있음을
+                      알려주고 최적화를 위한 위도를 제한합니다. 그러나
+                      <code>volatile</code>의 의미는 잘 정의되어 있지 않으므로
+                      일반적인 해결책은 아닙니다. 기본 핀토스 코드는
+                      <code>volatile</code>을 전혀 사용하지 않습니다.
+                    </p>
+                    <p>
+                      락은 인터럽트를 방지하거나 컴파일러가 잠금이 유지되는 영역
+                      내에서 코드를 재정렬하는 것을 방지하지 못하기 때문에
+                      다음과 같은 방법은 해결책이 아닙니다:
+                    </p>
+                    <pre><code class="lang-C">    lock_acquire (&amp;timer_lock);        <span class="hljs-comment">/* 잘못된 코드 */</span>
     timer_put_char = <span class="hljs-string">&apos;x&apos;</span>;
     timer_do_put = <span class="hljs-literal">true</span>;
     lock_release (&amp;timer_lock);
 </code></pre>
-<p>The compiler treats invocation of any function defined externally, that is, in
-another source file, as a limited form of optimization barrier. Specifically,
-the compiler assumes that any externally defined function may access any
-statically or dynamically allocated data and any local variable whose address is
-taken. This often means that explicit barriers can be omitted. It is one reason
-that Pintos contains few explicit barriers.</p>
-<p>A function defined in the same source file, or in a header included by the
-source file, cannot be relied upon as a optimization barrier. This applies even
-to invocation of a function before its definition, because the compiler may read
-and parse the entire source file before performing optimization.</p>
-
-                                
-                                </section>
-                            
-    </div>
-    <div class="search-results">
-        <div class="has-results">
-            
-            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
-            <ul class="search-results-list"></ul>
-            
-        </div>
-        <div class="no-results">
-            
-            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
-            
-        </div>
-    </div>
-</div>
-
-                        </div>
-                    </div>
-                
+                    <p>
+                      컴파일러는 외부, 즉 다른 소스 파일에 정의된 함수의 호출을
+                      제한된 형태의 최적화 배리어로 취급합니다. 구체적으로
+                      컴파일러는 외부에서 정의된 함수가 정적 또는 동적으로
+                      할당된 데이터와 주소를 가져온 모든 로컬 변수에 액세스할 수
+                      있다고 가정합니다. 이는 종종 명시적 배리어가 생략될 수
+                      있음을 의미합니다. 이것이 핀토스에 명시적 배리어가 거의
+                      없는 이유 중 하나입니다.
+                    </p>
+                    <p>
+                      동일한 소스 파일 또는 소스 파일에 포함된 헤더에 정의된
+                      함수는 최적화 배리어로 신뢰할 수 없습니다. 컴파일러가
+                      최적화를 수행하기 전에 전체 소스 파일을 읽고 구문 분석할
+                      수 있기 때문에 정의 전에 함수를 호출하는 경우에도
+                      적용됩니다.
+                    </p>
+                  </section>
+                </div>
+                <div class="search-results">
+                  <div class="has-results">
+                    <h1 class="search-results-title">
+                      <span class="search-results-count"></span> results
+                      matching "<span class="search-query"></span>"
+                    </h1>
+                    <ul class="search-results-list"></ul>
+                  </div>
+                  <div class="no-results">
+                    <h1 class="search-results-title">
+                      No results matching "<span class="search-query"></span>"
+                    </h1>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
 
-            
-                
-                <a href="threads.html" class="navigation navigation-prev " aria-label="Previous page: Threads">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                
-                
-                <a href="memory_allocation.html" class="navigation navigation-next " aria-label="Next page: Memory Allocation">
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                
-            
-        
+        <a
+          href="threads.html"
+          class="navigation navigation-prev"
+          aria-label="Previous page: Threads"
+        >
+          <i class="fa fa-angle-left"></i>
+        </a>
+
+        <a
+          href="memory_allocation.html"
+          class="navigation navigation-next"
+          aria-label="Next page: Memory Allocation"
+        >
+          <i class="fa fa-angle-right"></i>
+        </a>
+      </div>
+
+      <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function () {
+          gitbook.page.hasChanged({
+            page: {
+              title: "Synchronization",
+              level: "6.2",
+              depth: 1,
+              next: {
+                title: "Memory Allocation",
+                level: "6.3",
+                depth: 1,
+                path: "appendix/memory_allocation.md",
+                ref: "appendix/memory_allocation.md",
+                articles: [],
+              },
+              previous: {
+                title: "Threads",
+                level: "6.1",
+                depth: 1,
+                path: "appendix/threads.md",
+                ref: "appendix/threads.md",
+                articles: [],
+              },
+              dir: "ltr",
+            },
+            config: {
+              gitbook: "*",
+              theme: "default",
+              variables: {},
+              plugins: [],
+              pluginsConfig: {
+                highlight: {},
+                search: {},
+                lunr: { maxIndexSize: 1000000, ignoreSpecialCharacters: false },
+                sharing: {
+                  facebook: true,
+                  twitter: true,
+                  google: false,
+                  weibo: false,
+                  instapaper: false,
+                  vk: false,
+                  all: ["facebook", "google", "twitter", "weibo", "instapaper"],
+                },
+                fontsettings: { theme: "white", family: "sans", size: 2 },
+                "theme-default": {
+                  styles: {
+                    website: "styles/website.css",
+                    pdf: "styles/pdf.css",
+                    epub: "styles/epub.css",
+                    mobi: "styles/mobi.css",
+                    ebook: "styles/ebook.css",
+                    print: "styles/print.css",
+                  },
+                  showLevel: false,
+                },
+              },
+              structure: {
+                langs: "LANGS.md",
+                readme: "README.md",
+                glossary: "GLOSSARY.md",
+                summary: "SUMMARY.md",
+              },
+              pdf: {
+                pageNumbers: true,
+                fontSize: 12,
+                fontFamily: "Arial",
+                paperSize: "a4",
+                chapterMark: "pagebreak",
+                pageBreaksBefore: "/",
+                margin: { right: 62, left: 62, top: 56, bottom: 56 },
+              },
+              styles: {
+                website: "styles/website.css",
+                pdf: "styles/pdf.css",
+                epub: "styles/epub.css",
+                mobi: "styles/mobi.css",
+                ebook: "styles/ebook.css",
+                print: "styles/print.css",
+              },
+            },
+            file: {
+              path: "appendix/synchronization.md",
+              mtime: "2022-05-23T14:07:34.236Z",
+              type: "markdown",
+            },
+            gitbook: { version: "3.2.3", time: "2022-05-23T14:13:22.147Z" },
+            basePath: "..",
+            book: { language: "" },
+          });
+        });
+      </script>
     </div>
 
-    <script>
-        var gitbook = gitbook || [];
-        gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Synchronization","level":"6.2","depth":1,"next":{"title":"Memory Allocation","level":"6.3","depth":1,"path":"appendix/memory_allocation.md","ref":"appendix/memory_allocation.md","articles":[]},"previous":{"title":"Threads","level":"6.1","depth":1,"path":"appendix/threads.md","ref":"appendix/threads.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"appendix/synchronization.md","mtime":"2022-05-23T14:07:34.236Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-23T14:13:22.147Z"},"basePath":"..","book":{"language":""}});
-        });
-    </script>
-</div>
-
-        
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
-        
-    
 
-    </body>
+    <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+
+    <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+
+    <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+
+    <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+
+    <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+
+    <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+  </body>
 </html>
-
