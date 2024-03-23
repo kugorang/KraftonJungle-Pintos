@@ -2,7 +2,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "(gdb) Debug Kernel with User Program",
+      "name": "(gdb) Debug PintOS",
       "type": "cppdbg",
       "request": "launch",
       "program": "${workspaceRoot}/${input:project}/build/kernel.o",
@@ -24,7 +24,7 @@
           "ignoreFailures": true
         }
       ],
-      "preLaunchTask": "Debug PintOS User Program"
+      "preLaunchTask": "Debug PintOS"
     }
   ],
   "inputs": [

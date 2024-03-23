@@ -341,12 +341,14 @@ tid_t thread_create(const char *name, int priority,
 	t->tf.cs = SEL_KCSEG;
 	t->tf.eflags = FLAG_IF;
 
+#ifdef USERPROG
 	t->fdt = palloc_get_multiple(PAL_ZERO & PAL_ASSERT, FDT_PAGES);
 	t->fdt[0] = STDIN_FILENO;
 	t->fdt[1] = STDOUT_FILENO;
 
 	// fork일 때만 자식 프로세스를 고려하면 잠재적 문제가 생길 수 있을 것으로 예상
 	list_push_back(&thread_current()->children, &t->child_elem);
+#endif
 
 	/* Add to run queue. */
 	thread_unblock(t);
@@ -757,12 +759,13 @@ static void init_thread(struct thread *t, const char *name, int priority)
 	// 현재 대기하고 있는 락을 가리키는 포인터이므로,
 	// 초기에는 어떤 락에도 대기하지 않는 상태(NULL)로 설정
 	t->origin_priority = priority;
-	t->next_fd = 3;
 	// for checking stackover flow
 	t->magic = THREAD_MAGIC;
 	list_init(&t->donations);
 
 #ifdef USERPROG
+	t->next_fd = 3;
+
 	list_init(&t->children);
 	sema_init(&t->child_wait_sema, 0);
 	sema_init(&t->duplicate_sema, 0);
